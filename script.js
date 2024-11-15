@@ -6,7 +6,6 @@ window.addEventListener("scroll", () => {
   // document
   //   .querySelector("header ul li a.active")
   //   .classList.toggle("active", scrollY > 30);
-
 });
 
 // NAV BAR MENU
@@ -27,6 +26,24 @@ closMenu.addEventListener("click", () => {
   openMenu.style.display = "block";
   closMenu.style.display = "none";
 });
+
+// Function to handle clicks outside the menu
+document.addEventListener("click", (event) => {
+  const isClickInsideMenu = navMenu.contains(event.target);
+  const isClickOnIcons =
+    openMenu.contains(event.target) || closMenu.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnIcons) {
+    closeMenu();
+  }
+});
+
+// Function to close menu and toggle icons
+function closeMenu() {
+  navMenu.style.display = "none";
+  closMenu.style.display = "none";
+  openMenu.style.display = "block";
+}
 
 const startBtn = document.querySelector(".start-btn");
 const popupInfo = document.querySelector(".pop-up");
@@ -214,3 +231,23 @@ function showResults() {
     }
   }, speed);
 }
+
+// // FORM
+
+// const conInput = document.querySelector(".contact-right input");
+// const conSubmit = document.querySelector(".contact-right .contact-btn");
+
+// // Select the form element
+// const form = document.getElementById("contactForm");
+
+// // Add a submit event listener to the form
+// form.addEventListener("submit", function (event) {
+//     // Add a small delay to allow the form submission to complete
+//     setTimeout(function() {
+//         // Reset all the form fields after submission
+//         form.reset();
+        
+//         // Optionally, you can display a success message or perform other actions
+//         alert("Message sent successfully!");
+//     }, 500);  // Delay of 500 milliseconds
+// });

@@ -90,7 +90,7 @@ header ul li a {
 }
 header ul li a.active,
 header ul li a:hover {
-  color: #c40094;
+  color: #ffcc00;
 }
 
 .nav-icon {
@@ -126,7 +126,7 @@ header ul li a:hover {
   border-radius: 1rem;
   position: relative;
   bottom: 8rem;
-  background: #c40094;
+  background: #9400c4;
 }
 
 .contact .avatar {
@@ -243,7 +243,6 @@ textarea {
   letter-spacing: 2px;
   font-size: 2rem;
   font-weight: 800;
-
 }
 
 .copyright small {
@@ -274,7 +273,7 @@ textarea {
     align-items: center;
     justify-content: center;
 
-    background: green;
+    background: #c40094 ;
 
     animation: navAnimation 600ms ease forwards;
     transform: rotateX(90deg);
@@ -329,11 +328,9 @@ textarea {
   .contact {
     padding: 7rem 5rem 7rem;
   }
-
 }
 
 @media screen and (max-width: 900px) {
-
   .contact {
     padding: 7rem 5rem 4rem;
   }
@@ -344,7 +341,6 @@ textarea {
     height: auto;
     gap: 2rem;
 
-    background: green;
   }
 
   .contact-left {

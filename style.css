@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: white;
 }
 
@@ -47,6 +47,11 @@ main {
   background-size: cover;
   min-height: 100vh;
   transition: all 0.1s ease-in-out;
+}
+
+main.active {
+  filter: blur(10px);
+  pointer-events: none;
 }
 
 /* HEADER */
@@ -91,8 +96,13 @@ header ul li a {
 }
 header ul li a.active,
 header ul li a:hover {
-  color: #c40094;
-  color: blue;
+  /* color: #00c444; */
+  /* color: #c4005b; */
+  /* color: #c400c4; */
+  /* color: #9400c4; */
+  /* color: #0094c4 ; */
+  /* color: #94c400 ; */
+  color: #ffcc00 ;
 }
 
 .nav-icon {
@@ -152,6 +162,8 @@ header ul li a:hover {
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
+
+  overflow: visible;
 }
 
 .home .home-content button:hover {
@@ -251,6 +263,7 @@ header ul li a:hover {
   left: -50%;
   /* left: 0%; */
   width: 100%;
+  height: 100%;
   z-index: 999999;
 
   display: flex;
@@ -276,7 +289,9 @@ header ul li a:hover {
   background: transparent;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0);
+  transform: scale(0.1);
+  transition: 1s ease 0.8s;
+
 }
 
 .quiz-container.active {
@@ -438,7 +453,6 @@ header ul li a:hover {
   flex-direction: column;
   align-items: center;
 
-  margin: 2rem 0 2rem;
 }
 /* PROGRESS BAR */
 
@@ -538,7 +552,7 @@ header ul li a:hover {
     align-items: center;
     justify-content: center;
 
-    background: green;
+    background: #c40094 ;
 
     animation: navAnimation 600ms ease forwards;
     transform: rotateX(90deg);
@@ -560,7 +574,6 @@ header ul li a:hover {
 
   .open-menu {
     display: block;
-    background: red;
   }
 
   @keyframes navAnimation {
@@ -609,6 +622,23 @@ header ul li a:hover {
   .result-container {
     width: 70%;
   }
+
+  .quiz-container {
+    max-width: 50rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .quiz-question {
+    font-size: 1.5rem;
+  }
+
+  .quiz-section .options {
+    margin: 1rem 0 0;
+  }
+
+  .quiz-section .option {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 410px) {
@@ -648,5 +678,13 @@ header ul li a:hover {
   .result-container {
     width: 60%;
     margin-inline: auto;
+  }
+
+  .quiz-heading {
+    flex-direction: column;
+  }
+
+  .score {
+    padding: 0.4rem;
   }
 }

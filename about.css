@@ -90,8 +90,7 @@ header ul li a {
 }
 header ul li a.active,
 header ul li a:hover {
-  color: #c40094;
-  color: blue;
+  color: #ffcc00 ;
 }
 
 .nav-icon {
@@ -171,7 +170,7 @@ header ul li a:hover {
   transform: translateY(-50%);
   right: -100%;
   display: flex;
-  background: #950170;
+  background: #c4005b;
 
   flex-direction: column;
   box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
@@ -205,8 +204,12 @@ header ul li a:hover {
   margin: 1rem 0 0;
 }
 
+.footer p {
+  font-size: 2rem;
+}
+
 .contact-socials a {
-  background: #950170;
+  background: #9400c4;
   width: 5.7rem;
   height: 5.7rem;
   color: white;
@@ -244,7 +247,7 @@ header ul li a:hover {
     align-items: center;
     justify-content: center;
 
-    background: green;
+    background: #c40094 ;
 
     animation: navAnimation 600ms ease forwards;
     transform: rotateX(90deg);
