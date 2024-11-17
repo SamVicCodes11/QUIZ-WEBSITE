@@ -12,38 +12,60 @@ window.addEventListener("scroll", () => {
 
 const openMenu = document.querySelector(".open-menu");
 const closMenu = document.querySelector(".close-menu");
-
 const navMenu = document.querySelector("header ul");
 
+// Function to open the menu
 openMenu.addEventListener("click", () => {
   navMenu.style.display = "block";
   openMenu.style.display = "none";
   closMenu.style.display = "block";
 });
 
+// Function to close the menu
 closMenu.addEventListener("click", () => {
+  closeMenu();
+});
+
+// Function to close the menu and reset styles
+function closeMenu() {
   navMenu.style.display = "none";
   openMenu.style.display = "block";
   closMenu.style.display = "none";
-});
+}
 
 // Function to handle clicks outside the menu
 document.addEventListener("click", (event) => {
-  const isClickInsideMenu = navMenu.contains(event.target);
-  const isClickOnIcons =
-    openMenu.contains(event.target) || closMenu.contains(event.target);
+  // Check screen width
+  const maxWidth = 1030;
+  if (window.innerWidth <= maxWidth) {
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickOnIcons =
+      openMenu.contains(event.target) || closMenu.contains(event.target);
 
-  if (!isClickInsideMenu && !isClickOnIcons) {
-    closeMenu();
+    if (!isClickInsideMenu && !isClickOnIcons) {
+      closeMenu();
+    }
   }
 });
 
-// Function to close menu and toggle icons
-function closeMenu() {
-  navMenu.style.display = "none";
-  closMenu.style.display = "none";
-  openMenu.style.display = "block";
-}
+// Listen for window resize to reset desktop styles
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1030) {
+    // Reset menu styles for desktop view
+    navMenu.style.display = "flex"; // Ensure the menu is visible
+    openMenu.style.display = "none"; // Hide the open icon
+    closMenu.style.display = "none"; // Hide the close icon
+  } else {
+    // Reset styles for mobile/tablet view
+    navMenu.style.display = "none"; // Ensure menu is hidden initially
+    openMenu.style.display = "block"; // Show the open icon
+    closMenu.style.display = "none"; // Hide the close icon
+  }
+});
+
+
+
+
 
 const startBtn = document.querySelector(".start-btn");
 const popupInfo = document.querySelector(".pop-up");
