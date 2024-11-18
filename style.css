@@ -286,7 +286,7 @@ header ul li a:hover {
 .quiz-container {
   max-width: 50rem;
   width: 85%;
-  padding: 1.5rem 2.5rem;
+  padding: .6rem 2.5rem;
   color: white;
   border-radius: 6px;
   border: 2px solid #c40094;
@@ -316,7 +316,7 @@ header ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0rem;
+  padding: 1rem 0rem;
   border-top: 2px solid;
   font-size: 1.8rem;
   font-weight: 500;
@@ -327,14 +327,15 @@ header ul li a:hover {
   background-color: #c40094;
   border-radius: 6px;
 }
+
 .quiz-question {
-  font-size: 2.3rem;
+  font-size: 1.7rem;
 }
 
 /* QUIZ OPTIONS */
 
 .quiz-section .options {
-  margin: 2rem 0 2.2rem;
+  margin: 1rem 0 0rem;
 }
 
 /* QUIZ OPTION */
@@ -371,7 +372,7 @@ header ul li a:hover {
 /* QUIZ FOOTER */
 
 .quiz-footer {
-  padding-top: 2rem;
+  padding-top: 1rem;
   border-top: 2px solid;
   display: flex;
   justify-content: space-between;
