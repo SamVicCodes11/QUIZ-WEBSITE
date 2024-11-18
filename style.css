@@ -79,7 +79,6 @@ header {
 
   cursor: pointer;
   font-size: 2.8rem;
-
 }
 
 /* NAV BAR */
@@ -107,7 +106,7 @@ header ul li a:hover {
   /* color: #9400c4; */
   /* color: #0094c4 ; */
   /* color: #94c400 ; */
-  color: #ffcc00 ;
+  color: #ffcc00;
 }
 
 .nav-icon {
@@ -268,7 +267,7 @@ header ul li a:hover {
   left: -50%;
   /* left: 0%; */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 999999;
 
   display: flex;
@@ -296,7 +295,6 @@ header ul li a:hover {
   pointer-events: none;
   transform: scale(0.1);
   transition: 1s ease 0.8s;
-
 }
 
 .quiz-container.active {
@@ -457,7 +455,6 @@ header ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 /* PROGRESS BAR */
 
@@ -557,7 +554,7 @@ header ul li a:hover {
     align-items: center;
     justify-content: center;
 
-    background: #c40094 ;
+    background: #c40094;
 
     animation: navAnimation 600ms ease forwards;
     transform: rotateX(90deg);
