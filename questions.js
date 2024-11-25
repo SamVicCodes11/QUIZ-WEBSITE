@@ -24,22 +24,24 @@ let frontendQuiz = [
   },
   {
     numb: 3,
-    question: "How do you define a table header in an HTML table?",
-    answer: "D. Using the <th> tag",
-    options: [
-      "A. Using the <tr> tag",
-      "B. Using the <td> tag",
-      "C. Using the <caption> tag",
-      "D. Using the <th> tag",
-    ],
-  },
-  {
-    numb: 4,
     question:
       "Which JavaScript feature allows functions to remember the scope in which they were created?",
     answer: "B. Closures",
     options: ["A. Callbacks", "B. Closures", "C. Prototypes", "D. Promises"],
   },
+  {
+    numb: 4,
+    question:
+      "Which of the following methods will create a shallow copy of an array in JavaScript?",
+    answer: "A. Array.prototype.slice()",
+    options: [
+      "A. Array.prototype.slice()",
+      "B. Array.prototype.splice()",
+      "C. Array.prototype.shift()",
+      "D. Array.prototype.unshift()",
+    ],
+  },
+
   {
     numb: 5,
     question: "What is the purpose of the z-index property in CSS?",
