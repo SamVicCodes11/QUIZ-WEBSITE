@@ -1,10 +1,14 @@
 let frontendQuiz = [
   {
     numb: 1,
-    question:
-      "Which HTML attribute is used to specify a unique identifier for an element?",
-    answer: "B. id",
-    options: ["A. class", "B. id", "C. name", "D. key"],
+    question: "What does the <meta> tag do in an HTML document?",
+    answer: "C. Provides metadata about the document",
+    options: [
+      "A. Adds a stylesheet to the document",
+      "B. Specifies the title of the document",
+      "C. Provides metadata about the document",
+      "D. Links external scripts",
+    ],
   },
   {
     numb: 2,
@@ -20,10 +24,14 @@ let frontendQuiz = [
   },
   {
     numb: 3,
-    question:
-      "Which pseudo-class is used to style an element when it is hovered over?",
-    answer: "A. :hover",
-    options: ["A. :hover", "B. :focus", "C. :active", "D. :checked"],
+    question: "How do you define a table header in an HTML table?",
+    answer: "D. Using the <th> tag",
+    options: [
+      "A. Using the <tr> tag",
+      "B. Using the <td> tag",
+      "C. Using the <caption> tag",
+      "D. Using the <th> tag",
+    ],
   },
   {
     numb: 4,
@@ -45,25 +53,24 @@ let frontendQuiz = [
   },
   {
     numb: 6,
-    question: "What does HTML stand for?",
-    answer: "C. Hyper Text Markup Language",
+    question: "What is the difference between var, let, and const in JavaScript?",
+    answer: "C. var has function scope, let and const have block scope",
     options: [
-      "A. Hyper Type Multi Language",
-      "B. Hyper Text Multiple Language",
-      "C. Hyper Text Markup Language",
-      "D. Home Text Multi Language",
+      "A. They are all the same",
+      "B. var and let are block scoped, const is not",
+      "C. var has function scope, let and const have block scope",
+      "D. const can be reassigned, let cannot",
     ],
   },
   {
     numb: 7,
-    question:
-      "How do you apply a CSS rule only when the screen width is less than 768px?",
-    answer: "A. @media screen and (max-width: 768px)",
+    question: "What does the spread operator (...) do in JavaScript?",
+    answer: "A. Expands elements of an array or object",
     options: [
-      "A. @media screen and (max-width: 768px)",
-      "B. @media (min-width: 768px)",
-      "C. @responsive (max-width: 768px)",
-      "D. @screen (less-than: 768px)",
+      "A. Expands elements of an array or object",
+      "B. Combines multiple arrays into one",
+      "C. Limits the scope of variables",
+      "D. Prevents reassignment of variables",
     ],
   },
   {
@@ -114,20 +121,25 @@ let frontendQuiz = [
   },
   {
     numb: 13,
-    question: "Which CSS property is used to create a flex container?",
-    answer: "B. display: flex",
+    question: "What does the flex-grow property in CSS do?",
+    answer: "A. Defines how much a flex item will grow relative to others",
     options: [
-      "A. flex-container",
-      "B. display: flex",
-      "C. container-flex",
-      "D. flex-direction",
+      "A. Defines how much a flex item will grow relative to others",
+      "B. Specifies the maximum width of a flex item",
+      "C. Defines the alignment of flex items",
+      "D. Prevents a flex item from shrinking",
     ],
   },
   {
     numb: 14,
-    question: "Which CSS property is used to apply a 3D transformation?",
-    answer: "C. transform",
-    options: ["A. perspective", "B. animation", "C. transform", "D. skew"],
+    question: "How can you make a background image cover the entire element?",
+    answer: "C. background-size: cover",
+    options: [
+      "A. background-fit: contain",
+      "B. background-position: center",
+      "C. background-size: cover",
+      "D. background-clip: fill",
+    ],
   },
   {
     numb: 15,
@@ -173,9 +185,13 @@ let frontendQuiz = [
   },
   {
     numb: 20,
-    question:
-      "Which method in JavaScript is used to bind a function to a specific object?",
-    answer: "C. bind()",
-    options: ["A. call()", "B. apply()", "C. bind()", "D. attach()"],
+    question: "What is the purpose of the Array.prototype.reduce() method?",
+    answer: "B. To execute a reducer function on each element and return a single value",
+    options: [
+      "A. To create a new array from elements that pass a test",
+      "B. To execute a reducer function on each element and return a single value",
+      "C. To iterate over each element in an array",
+      "D. To transform each element into a new value",
+    ],
   },
 ];
