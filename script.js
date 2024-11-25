@@ -63,10 +63,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-
-
-
-
 const startBtn = document.querySelector(".start-btn");
 const popupInfo = document.querySelector(".pop-up");
 const exitBtn = document.querySelector(".exit-btn");
@@ -125,19 +121,42 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// Function to shuffle the questions
+function shuffleQuestions(questionsArray) {
+  for (let i = questionsArray.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [questionsArray[i], questionsArray[randomIndex]] = [
+      questionsArray[randomIndex],
+      questionsArray[i],
+    ];
+  }
+
+  // Update the question numbers to be sequential after shuffling
+  questionsArray.forEach((question, index) => {
+    question.numb = index + 1; // Assign new sequential numbering
+  });
+}
+
+// Event listener for the "Try Again" button
 tryAgainBtn.addEventListener("click", () => {
   resultSection.classList.remove("active");
   quizContainer.classList.add("active");
   nextBtn.classList.remove("active");
 
+  // Reset variables
   questionNumber = 0;
   questionNumberCount = 1;
   userScore = 0;
 
+  // Shuffle the questions
+  shuffleQuestions(frontendQuiz);
+
+  // Display the first question and reset counters
   showQuestion(questionNumber);
   questionNumberCounter(questionNumberCount);
   showScore();
 
+  // Reset the Next button text
   nextBtn.innerHTML = "Next";
 });
 
@@ -268,7 +287,7 @@ function showResults() {
 //     setTimeout(function() {
 //         // Reset all the form fields after submission
 //         form.reset();
-        
+
 //         // Optionally, you can display a success message or perform other actions
 //         alert("Message sent successfully!");
 //     }, 500);  // Delay of 500 milliseconds
